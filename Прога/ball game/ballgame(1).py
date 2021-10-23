@@ -83,7 +83,6 @@ class Ball:
         '''удаляет шарик'''
         self.r = -1
 
-# проверка на столкновения
     def inf(self):
         '''выносит данные шарика в код'''
         return(
@@ -99,6 +98,7 @@ class Ball:
         self.y = y
 
 def vozvrat(x, y, r):
+    '''отлепляет шарики, если они прилипли'''
     if y <= r - 3:
         y += 6
     if y >= (703 - r):
@@ -110,6 +110,7 @@ def vozvrat(x, y, r):
     return(x, y)
 
 def razlom(x1, y1, x2, y2):
+    '''отлепляет шарики, если они прилипли'''
     dx = x1 - x2
     dy = y1 - y2
     if dx != 0:
